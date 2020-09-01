@@ -2,7 +2,12 @@
 # The method should return true if the string contains only vowels.
 # The method should return false otherwise.
 
+def only_vowels?(string)
+    letters = string.split('')
+    vowels = 'aeiou'
 
+    letters.all? { |l| vowels.include?(l) }
+end
 p only_vowels?("aaoeee")  # => true
 p only_vowels?("iou")     # => true
 p only_vowels?("cat")     # => false
