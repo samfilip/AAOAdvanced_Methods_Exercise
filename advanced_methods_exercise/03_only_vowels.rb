@@ -3,10 +3,7 @@
 # The method should return false otherwise.
 
 def only_vowels?(string)
-    letters = string.split('')
-    vowels = 'aeiou'
-
-    letters.all? { |l| vowels.include?(l) }
+    string.split('').all? { |l| 'aeiou'.include?(l) }
 end
 p only_vowels?("aaoeee")  # => true
 p only_vowels?("iou")     # => true
