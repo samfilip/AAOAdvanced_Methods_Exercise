@@ -2,14 +2,8 @@
 # and a length as args. The method should return an array containing the strings
 # that have at least the given length. The length argument should be optional; if no length
 # is passed in, then 5 should be used as the length.
-def filter_lengths(arr, num=5)
-    long_strings = []
-    arr.each do |s|
-        if s.length >= num
-          long_strings.push(s)
-        end
-    end
-    return long_strings
+def filter_lengths(arr, length=5)
+    arr.select { |s| s.length >= length }
 end
 
 p filter_lengths(["pear", "dragonfruit", "fig", "clementine"], 4)   # => ["pear", "dragonfruit", "clementine"]
