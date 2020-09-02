@@ -2,9 +2,7 @@
 # the largest number. Solve this using the built-in inject.
 
 def max_inject(*args)
-    arr = args.to_a
-    
-    arr.inject do |acc, el| 
+    args.inject do |acc, el| 
         if el > acc
             el
         else
